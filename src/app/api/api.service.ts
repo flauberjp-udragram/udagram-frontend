@@ -67,8 +67,7 @@ export class ApiService {
 
     const headers = new HttpHeaders({
       "Content-Type": file.type,
-      "Access-Control-Allow-Origin":
-        "http://a3aa096c7b2ea4446bed82cbcc11c25b-1645837649.us-east-1.elb.amazonaws.com",
+      "Access-Control-Allow-Origin": environment.frontEndDomain,
       "Access-Control-Allow-Credentials": "true",
     });
     const req = new HttpRequest("PUT", signed_url, file, {
